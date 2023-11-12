@@ -1,0 +1,5 @@
+check elasticsearch status:
+curl -X GET localhost:9200/\_cluster/health
+
+synchronize database and elasticsearch:
+python manage.py search_index --rebuild
