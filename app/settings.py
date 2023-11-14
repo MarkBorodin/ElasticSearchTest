@@ -40,11 +40,12 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_elasticsearch_dsl',
-    # 'django_elasticsearch_dsl_drf',
+    'django_elasticsearch_dsl_drf',
     'django_extensions',
 
     'articles',
     'search',
+    'popularity_counter',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'popularity_counter.middleware.ElasticsearchPopularityMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'

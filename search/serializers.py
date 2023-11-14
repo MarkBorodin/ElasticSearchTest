@@ -17,7 +17,7 @@ class ArticleDocumentSerializer(DocumentSerializer):
 
     class Meta:
         document = ArticleDocument
-        fields = ('title', 'category', 'content', 'id')
+        fields = ('title', 'category', 'content', 'popularity_counter', 'id')
 
     def get_id(self, obj):
         return obj.meta.id

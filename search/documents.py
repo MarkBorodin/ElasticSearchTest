@@ -36,6 +36,8 @@ class ArticleDocument(Document):
         }
     )
 
+    popularity_counter = fields.IntegerField(attr='popularity_counter')
+
     settings = {
         'number_of_shards': 1,
         'number_of_replicas': 1

@@ -1,8 +1,12 @@
+import json
+
+from django.http import HttpResponse, JsonResponse
 from django_elasticsearch_dsl_drf.constants import SUGGESTER_COMPLETION, SUGGESTER_PHRASE, SUGGESTER_TERM, \
     LOOKUP_FILTER_TERMS, LOOKUP_FILTER_PREFIX, LOOKUP_FILTER_WILDCARD, LOOKUP_QUERY_EXCLUDE
 from django_elasticsearch_dsl_drf.filter_backends import SearchFilterBackend, FilteringFilterBackend, \
     SuggesterFilterBackend, OrderingFilterBackend, DefaultOrderingFilterBackend
 from django_elasticsearch_dsl_drf.viewsets import DocumentViewSet
+from elasticsearch import Elasticsearch
 from rest_framework import generics
 
 from search.documents import ArticleDocument, CategoryDocument
